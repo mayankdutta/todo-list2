@@ -3,6 +3,7 @@ import { useState } from "react";
 function App() {
   const [data, setData] = useState("");
   const [arr, setArr] = useState([]);
+  const [cut, setCut] = useState([]);
 
   const takeInput = (event) => {
     setData(event.target.value);
@@ -11,13 +12,25 @@ function App() {
     setArr(function () {
       return [...arr, data];
     });
+
+    setCut(function () {
+      return [...cut, data];
+    });
     setData("");
   };
 
   const del = (id) => {
+    /*
     setArr(function () {
       return arr.filter((val, index) => {
         return index !== id;
+      });
+    });
+    */
+
+    setCut(function () {
+      return cut.map((val, index) => {
+        return index === id ? "0" : val;
       });
     });
   };
@@ -53,7 +66,11 @@ function App() {
               <button className={buttons} onClick={() => del(index)}>
                 x
               </button>
-              <span className=""> {d} </span>
+              {cut[index] !== "0" ? (
+                <span className=""> {d} </span>
+              ) : (
+                <span className="text-gray-500 line-through "> {d} </span>
+              )}
             </div>
           );
         })}

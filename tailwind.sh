@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+npm install @material-ui/core
+npm install @material-ui/icons
 npm install -D tailwindcss@npm:@tailwindcss/postcss7-compat postcss autoprefixer
 npm install @craco/craco
 

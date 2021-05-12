@@ -1,9 +1,16 @@
+import AddIcon from "@material-ui/icons/Add";
+
 function App() {
   return (
-    <div className="bg-green-400">
-      <div className=" my-80 bg-gray-400 grid grid-cols-1 justify-items-center justify-center content-center items-center">
-        hii
-        <div className=""> </div>
+    <div className="items-center bg-gray-400 my-80 grid place-items-center place-content-center">
+      <div className="p-8 bg-white">
+        <div className=""> Todo List </div>
+        <div className="">
+          <input type="text" placeholder="item ka naam likh" value="" />
+          <button className="">
+            <Icon />
+          </button>
+        </div>
       </div>
     </div>
   );

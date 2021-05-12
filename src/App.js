@@ -38,7 +38,7 @@ function App() {
   const buttons =
     "text-6xl text-gray-200 font-light bg-green-600 border-8 border-transparent rounded-full shadow-2xl h-20 w-20 hover:text-green-600 hover:bg-white";
   return (
-    <div className="items-center my-80 grid place-items-center place-content-center">
+    <div className="items-center my-8 grid place-items-center place-content-center">
       <div className="py-4 bg-gray-200 border-8 border-transparent hover:border-green-600 rounded-3xl space-y-8">
         <div className="p-2 my-4 font-light text-center text-white bg-green-600 text-8xl">
           Todo List
